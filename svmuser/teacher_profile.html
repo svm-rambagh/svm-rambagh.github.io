@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVM | Portal | Profile</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/dashboard">mySVM Portal</a> 
+            </div>
+              <div style="color: white;
+                        padding: 15px 50px 5px 50px;
+                        float: right;
+                        font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+            <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                <li class="text-center">
+                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <span style="color:#fff" th:text="'Teacher '+' '+' | '+' '+' ID : '+ ${session.id}"></span>
+                    </li>
+ 
+                    <li>
+                        <a  href="/dashboard"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                    </li>
+                       
+                    <li>
+                       <a  class="active-menu" href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
+                    </li>
+                </ul>             
+                </div>         
+            </nav>  
+            <!-- /. NAV SIDE  -->
+
+        <div id="page-wrapper" >
+            
+            
+            <!-- /. PAGE INNER  -->
+            <div id="page-inner">
+
+                <div class="row">
+                <div class="col-md-9">   
+                      <h3>
+                        Your Profile
+                        <small>Great to see you back.</small>
+                      </h3>                       
+                </div>
+                <div class="col-md-3" style="top: 25px;">   
+                   <ol class="breadcrumb">
+                        <li><a href="/dashboard"><i class="fa fa-dashboard"></i>&nbsp;Home</a></li>
+                        <li class="active">Profile</li>
+                    </ol>                          
+                </div>           
+                </div>
+
+                <!-- /. ROW  -->
+                <hr />
+
+				<div class="panel-body" style="padding: 0px;">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#home" data-toggle="tab" aria-expanded="false">Home</a>
+                                </li>
+                                <li class=""><a href="#profile" data-toggle="tab" aria-expanded="false">Personal </a>
+                                </li>
+                                <li class=""><a href="#messages" data-toggle="tab" aria-expanded="false">Academic </a>
+                                </li>
+                                <li class=""><a href="#settings" data-toggle="tab" aria-expanded="true">Settings</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="home">
+                                    <h4>Home Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <h4>Profile Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="tab-pane fade" id="messages">
+                                    <h4>Messages Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                                <div class="tab-pane fade active in" id="settings">
+                                    <h4>Settings Tab</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+            </div>
+            <!-- /. PAGE INNER  -->
+
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    Powered by
+                    <b>...  |  Version</b> 2.3.0
+                    </div>
+                    <strong>Copyright &copy; 2015-2016 SVM &nbsp;<a href="#">Rambagh</a>.</strong> All rights reserved.
+            </footer>
+        </div>       
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });    
+    </script>
+</body>
+</html>

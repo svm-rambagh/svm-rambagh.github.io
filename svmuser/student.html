@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/dashboard">mySVM Portal</a> 
+            </div>
+  <div style="color: white;
+		padding: 15px 50px 5px 50px;
+		float: right;
+		font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                <li class="text-center">
+                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <span style="color:#fff" th:text="'Student '+' '+' | '+' '+' ID : '+ ${session.id}"></span>
+                </li>
+ 
+                <li>
+                    <a class="active-menu" href="/dashboard"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                </li>
+                       
+                <li>
+                    <a  href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
+                </li>
+                </ul>             
+                </div>         
+            </nav>  
+            <!-- /. NAV SIDE  -->
+
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-9">   
+                          <h3>
+                            Welcome Bipin,
+                            <small>Great to see you back.</small>
+                          </h3>                       
+                    </div>
+                    <div class="col-md-3" style="top: 25px;">   
+                       <ol class="breadcrumb">
+                            <li><a href="/dashboard"><i class="fa fa-dashboard"></i>&nbsp;Home</a></li>
+                           
+                        </ol>                          
+                    </div>           
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-6">  
+                        <a href="/student_self_information" style="text-decoration:none">     
+	                        <div class="panel panel-back noti-box">
+	                            <span class="icon-box bg-color-red set-icon">
+	                                <i class="fa fa-male"></i>
+	                            </span>
+	                            <div class="text-box" >
+	                                <p class="main-text">2000 </p>
+	                                <p class="text-muted">Students</p>
+	                            </div>
+	                         </div>
+                         </a>
+                    </div>
+                    
+                    
+         
+                </div>
+                 <!-- /. ROW  -->
+                <hr />                
+                <div class="row">  
+
+                    <div class="col-md-3 col-sm-12 col-xs-12 ">
+                        <div class="panel ">
+                          <div class="main-temp-back">
+                            <div class="panel-body">
+                              <div class="row">
+                                <div class="col-xs-6"> <i class="fa fa-cloud fa-3x"></i> Basti City </div>
+                                <div class="col-xs-6">
+                                  <div class="text-temp"> 34°C </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>         
+                        </div>                                      
+                    </div>                        
+                </div>
+                 <!-- /. ROW  -->                                     
+            </div>
+             <!-- /. PAGE INNER  -->
+             <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    Powered by
+                    <b>...  |  Version</b> 2.3.0
+                    </div>
+                    <strong>Copyright &copy; 2015-2016 SVM &nbsp;<a href="#">Rambagh</a>.</strong> All rights reserved.
+            </footer>
+        </div>
+         <!-- /. PAGE WRAPPER  -->
+    </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        function disableBack() { window.history.forward() }
+
+        window.onload = disableBack();
+        window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+    });    
+    </script>
+</body>
+</html>
