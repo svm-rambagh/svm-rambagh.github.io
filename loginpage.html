@@ -11,7 +11,23 @@
 	<!-- Loading main css file -->
 	<link rel="stylesheet" href="css/animate.css" />
 	<link rel="stylesheet" href="css/style.css" />
-	
+	<style>
+	.mar{
+	  width: 800px; height: 50px; white-space: wrap;
+	  overflow: hidden;
+	  overflow-x:-webkit-marquee;
+	  -webkit-marquee-direction: forwards;
+	  -webkit-marquee-style: scroll;
+	  -webkit-marquee-speed: normal;
+	  -webkit-marquee-increment: small;
+	  -webkit-marquee-repetition: 5;
+	  overflow-x: marquee-line;
+	  marquee-direction: forward;
+	  marquee-style: scroll;
+	  marquee-speed: normal;
+	  marquee-play-count: 5;
+	}
+	</style
 </head>
 
 	<body  ng-app="demoApp" ng-controller="ModuleController" >
@@ -23,7 +39,7 @@
 				<div class="bottom-header ">
 					<div class="container ">
 						<span class="member-navigation">
-						<a href="/" class="branding pull-left">
+						<a href="http://www.svmrambagh.in" class="branding pull-left">
 							
 							<h1 class="site-title">SVM <span>RamBagh</span></h1> 
 							<h2 class="site-description">Tagline goes here</h2>
@@ -34,7 +50,7 @@
 			</header> <!-- .site-header -->
 
 			<main class="content">
-				
+			<marquee class="mar">This service will resume shortly.</marquee>	
 				<div class="page-content">
 
 					<div class="fullwidth-block">
@@ -57,11 +73,11 @@
 										<div class="row">
 											<div class="col-md-7">
 												<p class="wow fadeInRight">
-												<input type="text" name="id" placeholder="Your ID"/></p>
+												<input disabled="" type="text" name="id" placeholder="Your ID"/></p>
 												<p class="wow fadeInRight">
-												<input type="password" name="password" placeholder="Password"/></p>
+												<input disabled="" type="password" name="password" placeholder="Password"/></p>
 
-												<input type="submit" class="button pull-right wow fadeInRight" value="Login"/>
+												<input disabled="" type="submit" class="button pull-right wow fadeInRight" value="Login"/>
 											</div>
 											
 										</div>

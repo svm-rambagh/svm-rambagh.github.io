@@ -206,52 +206,101 @@
 			</main> <!-- .content -->
 
 			<footer class="site-footer wow fadeInUp">
-				<div class="container">
+			<div class="container">
 
-					<div class="row">
-						
-						
-						<div class="col-md-6 ">
-						
-							<nav class="footer-navigation">
-								<a href="#">News</a>
-								<a href="#">Activities</a>
-								<a href="#">Alumni</a>
-								<a href="#">Contact</a>
-							</nav> <!-- .footer-navigation -->
-						
-							<div class="social-links">
-								<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-								<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-								<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-								<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-								
-							</div> <!-- .social-links -->
-						
+				<div class="row">
+				
+					<div class="col-md-6 ">
+
+						<nav class="footer-navigation">
+							<a href="circularpage.html">News</a> <a href="#">Activities</a> <a href="#">Alumni</a>
+							<a href="contactpage.html">Contact</a>
+						</nav>
+						<!-- .footer-navigation -->
+
+						<div class="social-links">
+							<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> <a
+								href="#" class="facebook"><i class="fa fa-facebook"></i></a> <a
+								href="#" class="twitter"><i class="fa fa-twitter"></i></a> <a
+								href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+
 						</div>
-
-						<div class="col-md-6  ">
-							
-							<div class=" branding">
-								<img src="images/footer.png" alt="SVM" class="logo-icon">
-								<h1 class="site-title"><a href="#">SVM <span>RamBagh Basti</span></a></h1> 
-								<h2 class="site-description">Tagline goes here</h2>
-							</div> <!-- .branding -->
-
-							<p class="copy">Copyright 2014 SVM RamBagh Basti. Powered by . All rights reserved</p>
-						</div>
+						<!-- .social-links -->
 
 					</div>
+					
+					<div class="col-md-6  ">
 
+						<div class=" branding">
+							<img src="images/logo.png" alt="SVM" class="logo-icon" style="height: 40px;"/>
+							<h1 class="site-title">
+								<a href="index.html">SVM <span>RamBagh Basti</span></a>
+							</h1>
+							<h2 class="site-description">Shiksha Aur Sanakar</h2>
+						</div>			
+						<p class="copy">Copyright 2014 SVM RamBagh Basti. Powered by
+							... All rights reserved</p>
+					</div>
+					
 				</div>
-			</footer> <!-- .site-footer -->
+			</div>
+		</footer>
+		<!-- .site-footer -->
+		<a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: inline;">Top<span></span></a>
 
-		</div> <!-- #site-content -->
+	</div>
+	<!-- #site-content -->
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<script type='text/javascript'>
+	$(document).ready(function(){ 
+		$(window).scroll(function(){ 
+			if ($(this).scrollTop() > 100) { 
+				$('#scroll').fadeIn(); 
+			} else { 
+				$('#scroll').fadeOut(); 
+			} 
+		}); 
+		$('#scroll').click(function(){ 
+			$("html, body").animate({ scrollTop: 0 }, 600); 
+			return false; 
+		}); 
+	});
+	</script>
+	<style type="text/css">
+	/* BackToTop button css */
+	#scroll {
+		position:fixed;
+		right:10px;
+		bottom:10px;
+		cursor:pointer;
+		width:50px;
+		height:50px;
+		background-color:#EF9852;
+		text-indent:-9999px;
+		display:none;
+		-webkit-border-radius:60px;
+		-moz-border-radius:60px;
+		border-radius:60px
+	}
+	#scroll span {
+		position:absolute;
+		top:50%;
+		left:50%;
+		margin-left:-8px;
+		margin-top:-12px;
+		height:0;
+		width:0;
+		border:8px solid transparent;
+		border-bottom-color:#ffffff
+	}
+	#scroll:hover {
+		background-color:#e74c3c;
+		opacity:1;filter:"alpha(opacity=100)";
+		-ms-filter:"alpha(opacity=100)";
+	}
+	</style>
 
-		<script src="js/jquery-1.11.1.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/app.js"></script>
-		
-	</body>
-
+</body>
 </html>
